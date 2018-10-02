@@ -1,13 +1,12 @@
 # Climate_Analysis_API
 Step 1 - Data Engineering
 
-The climate data for Hawaii is provided through two CSV files. Start by using Python and Pandas to inspect the content of these files and clean the data.
+The climate data for Hawaii is provided through two CSV. The content of these files inspected and cleaned using Python and Pandas.
 
 
-Create a Jupyter Notebook file called data_engineering.ipynb and use this to complete all of your Data Engineering tasks.
-Use Pandas to read in the measurement and station CSV files as DataFrames.
-Inspect the data for NaNs and missing values. You must decide what to do with this data.
-Save your cleaned CSV files with the prefix clean_.
+ a Jupyter Notebook file called data_engineering.ipynb created and used to complete all of  Data Engineering tasks.
+Pandas used to read in the measurement and station CSV files as DataFrames and inspected for NaNs and missing values. 
+ the cleaned CSV files saved with the prefix clean_.
 
 
 
@@ -15,78 +14,73 @@ Save your cleaned CSV files with the prefix clean_.
 
 Step 2 - Database Engineering
 
-Use SQLAlchemy to model your table schemas and create a sqlite database for your tables. You will need one table for measurements and one for stations.
+SQLAlchemy used to model  table schemas and create a sqlite database for the tables. it include one table for measurements and one for stations.
 
 
-Create a Jupyter Notebook called database_engineering.ipynb and use this to complete all of your Database Engineering work.
-Use Pandas to read your cleaned measurements and stations CSV data.
-Use the engine and connection string to create a database called hawaii.sqlite.
+Jupyter Notebook called database_engineering.ipynb  created and used to complete all of  Database Engineering work.
+Pandas used to read the cleaned measurements and stations CSV data.
+the engine and connection string used to create a database called hawaii.sqlite.
 
-Use declarative_base and create ORM classes for each table.
-
-
-You will need a class for Measurement and for Station.
-Make sure to define your primary keys.
+a declarative_base was used  and  ORM classes were created for each table.
 
 
-Once you have your ORM classes defined, create the tables in the database using create_all.
-
-
+ a class for Measurement and for Station.
+ primary keys were defined.
 
 
 
 Step 3 - Climate Analysis and Exploration
 
-You are now ready to use Python and SQLAlchemy to do basic climate analysis and data exploration on your new weather station tables. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+ready to use Python and SQLAlchemy to do basic climate analysis and data exploration on the new weather station tables. All of the following analysis  completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
 
-Create a Jupyter Notebook file called climate_analysis.ipynb and use it to complete your climate analysis and data exporation.
-Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
-Use SQLAlchemy create_engine to connect to your sqlite database.
-Use SQLAlchemy automap_base() to reflect your tables into classes and save a reference to those classes called Station and Measurement.
+a Jupyter Notebook file called climate_analysis.ipynb created and used to complete the climate analysis and data exporation.
+a start date and end date choosen for the trip with vacation range of approximately 3-15 days total.
+SQLAlchemy create_engine used to connect to the sqlite database.
+SQLAlchemy automap_base() used to reflect the tables into classes and  a reference was saved to those classes called Station and Measurement.
 
 
 
 Precipitation Analysis
 
 
-Design a query to retrieve the last 12 months of precipitation data.
-Select only the date and prcp values.
-Load the query results into a Pandas DataFrame and set the index to the date column.
-Plot the results using the DataFrame plot method.
-Use Pandas to print the summary statistics for the precipitation data.
+a query was designed to retrieve the last 12 months of precipitation data.
+only the date and prcp values selected.
+the query results loaded into a Pandas DataFrame and  the index was set to the date column.
+the results was ploted using the DataFrame plot method.
+Pandas was used to print the summary statistics for the precipitation data.
 
 
 
 Station Analysis
 
 
-Design a query to calculate the total number of stations.
+ a query was designed to calculate the total number of stations.
 
-Design a query to find the most active stations.
+a query  was designedto find the most active stations.
 
-
-List the stations and observation counts in descending order
-Which station has the highest number of observations?
-
+ the stations and observation counts listed in descending order
+The station with  the highest number of observations identified.
 
 
-Design a query to retrieve the last 12 months of temperature observation data (tobs).
+
+a query designed to retrieve the last 12 months of temperature observation data (tobs).
 
 
-Filter by the station with the highest number of observations.
-Plot the results as a histogram with bins=12.
+Filtered by the station with the highest number of observations.
+the results ploted  as a histogram with bins=12.
+
 Temperature Analysis
 
 
-Write a function called calc_temps that will accept a start date and end date in the format %Y-%m-%d and return the minimum, average, and maximum temperatures for that range of dates.
-Use the calc_temps function to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year (i.e. use "2017-01-01" if your trip start date was "2018-01-01")
+a function called calc_temps  that accept a start date and end date in the format %Y-%m-%d and return the minimum, average, and maximum temperatures for that range of dates.
+the calc_temps function used to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year (i.e. use "2017-01-01" if your trip start date was "2018-01-01")
+ the min, avg, and max temperature ploted from previous query as a bar chart.
 
-Plot the min, avg, and max temperature from your previous query as a bar chart.
 
+the average temperature used as the bar height.
+the peak-to-peak (tmax-tmin) value used as the y error bar (yerr).
 
-Use the average temperature as the bar height.
-Use the peak-to-peak (tmax-tmin) value as the y error bar (yerr).
 Optional Recommended Analysis
 
 
